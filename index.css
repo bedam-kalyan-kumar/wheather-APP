@@ -249,6 +249,7 @@ span:hover{
         gap: 20px;
         align-items: center;
         justify-content: center;
+        margin-right: 10px;
     }
     .leftinsideOne{
         width: 90%;
