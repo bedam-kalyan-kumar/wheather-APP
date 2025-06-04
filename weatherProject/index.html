@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <link rel="stylesheet" href="./weather.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=partly_cloudy_day" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+</head>
+
+<body>
+    <div class="inputBar">
+        <label for="district">Select a District:</label>
+        <select id="district">
+            <option value="chittoor">Chittoor</option>
+            <option value="tirupati">Tirupati</option>
+            <option value="kakinada">Kakinada</option>
+            <option value="guntur">Guntur</option>
+            <option value="kurnool">Kurnool</option>
+            <option value="nandyal">Nandyal</option>
+            <option value="krishna">Krishna</option>
+            <option value="nellore">SPS Nellore</option>
+            <option value="srikakulam">Srikakulam</option>
+            <option value="vizianagaram">Vizianagaram</option>
+            <option value="visakhapatnam">Visakhapatnam</option>
+            <option value="eluru">Eluru</option>
+            <option value="bapatla">Bapatla</option>
+            <option value="machilipatnam">Machilipatnam</option>
+            <option value="mumbai">mumbai</option>
+            <option value="ongole">Ongole</option>
+        </select>
+
+        <span class="material-symbols-outlined" onclick="fetchdata()" style="color: white; margin-right: 40px;">
+            search
+        </span>
+    </div>
+    <div class="Wholepage">
+        <div class="leftside">
+            <div class="leftinsideOne">
+                <div class="cityname">
+                    <div>
+                        <p id="city">city</p>
+                    </div>
+                    <div style="display: flex;">
+                        <p id="temp">city</p>
+                        <p>&degC</p>
+                    </div>
+                    <div>
+                        <p id="sky">sky</p>
+                    </div>
+                    <p>------------------</p>
+                </div>
+                <div class="timeandDate">
+                    <p id="date">Date<span id="date"></span></p>
+                    <p id="time">Time<span id="time"></span></p>
+                </div>
+            </div>
+            <div class="leftinsideTwo">
+                <h2 style="padding-left: 16px;">Tomarrow for every 3 hours</h2>
+                <div class="line">
+                    <div class="comingdays">
+                        <p id="dayonedegree">7&deg</p>
+                        <p id="dayoneday">saturday</p>
+                        <p id="dayonedate">DATE 1 </p>
+                    </div>
+                    <div class="comingdays">
+                        <p id="dayotwodegree">7&deg</p>
+                        <p id="daytwoday">saturday</p>
+                        <p id="daytwodate">DATE 2</p>
+                    </div>
+                    <div class="comingdays">
+                        <p id="daythreedegree">7&deg</p>
+                        <p id="daythreeday">saturday</p>
+                        <p id="daythreedate">DATE 3</p>
+                    </div>
+                    <div class="comingdays">
+                        <p id="dayfourdegree">7&deg</p>
+                        <p id="dayfourday">saturday</p>
+                        <p id="dayfourdate">DATE 4</p>
+                    </div>
+                    <div class="comingdays">
+                        <p id="dayfivedegree">7&deg</p>
+                        <p id="dayfiveday">saturday</p>
+                        <p id="dayfivedate">DATE 5</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightside">
+            <div class="rightinsideOne">
+                <div class="rightoneone">
+                    <h4>pressure</h4>
+                    <p id="pressure1">1025hpQ</p>
+                </div>
+                <div class="rightoneone">
+                    <h4>pressure</h4>
+                    <p id="pressure2">1025hpQ</p>
+                </div>
+                <div class="rightoneone">
+                    <h4>pressure</h4>
+                    <p id="pressure3">1025hpQ</p>
+                </div>
+                <div class="rightoneone">
+                    <h4>pressure</h4>
+                    <p id="pressure4">1025hpQ</p>
+                </div>
+            </div>
+            <div class="rightinsideTwo">
+                <div class="rightinsideTwoone">
+                    <div style="padding-left: 10px;">
+                        <h4>Air Quality Index</h4>
+                    </div>
+                    <div class="air" style="margin: 0 2px; padding: 0px;">
+                        <div class="righttwotwo">
+                            <p id="co">co</p>
+                            <p id="covalue">3.90</p>
+                        </div>
+                        <div class="righttwotwo">
+                            <p id="no">no</p>
+                            <p id="novalue">3.90</p>
+                        </div>
+                        <div class="righttwotwo">
+                            <p id="no2">no2</p>
+                            <p id="no2value">3.90</p>
+                        </div>
+                        <div class="righttwotwo">
+                            <p id="o3">o3</p>
+                            <p id="o3value">3.90</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightinsideTwotwo" style="line-height: 0.1;">
+                    <div>
+                        <h4 style="padding-left: 20px; font-size: 20px;">sunrise &sunset</h4>
+                    </div>
+                    <div style="display: flex; justify-content: space-around;">
+
+                        <div style="display: flex; gap: 7px; line-height: 0.5;">
+                            <div>
+                                <p style="font-size: 20px;">&#127749;</p>
+                            </div>
+                            <div>
+                                <p style="font-size: 20px;">sunrise</p>
+                                <p id="sunrisetime" style="font-size: 20px;">time</p>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 7px; line-height: 0.5;">
+                            <div>
+                                <p style="font-size: 20px;">&#127749;</p>
+                            </div>
+                            <div>
+                                <p style="font-size: 20px;">sunset</p>
+                                <p id="sunsettime" style="font-size: 20px;">time</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="rightinsideThree">
+                <div style="padding-left: 10px;">
+                    <h3 style="padding: 10px;">Today</h3>
+                </div>
+                <div class="clouds">
+                    <div class="insideclouds">
+                        <div>
+                            <p id="threeonetime">time</p>
+                        </div>
+                        <div>
+                            <p id="threeonecloud">cloud</p>
+                        </div>
+                        <div>
+                            <p id="threeonedegree">5&degC</p>
+                        </div>
+                    </div>
+                    <div class="insideclouds">
+                        <div>
+                            <p id="threetwotime">time</p>
+                        </div>
+                        <div>
+                            <p id="threetwocloud">cloud</p>
+                        </div>
+                        <div>
+                            <p id="threetwodegree">5&degC</p>
+                        </div>
+                    </div>
+                    <div class="insideclouds">
+                        <div>
+                            <p id="threethreetime">time</p>
+                        </div>
+                        <div>
+                            <p id="threethreecloud">cloud</p>
+                        </div>
+                        <div>
+                            <p id="threethreedegree">5&degC</p>
+                        </div>
+                    </div>
+                    <div class="insideclouds">
+                        <div>
+                            <p id="threefourtime">time</p>
+                        </div>
+                        <div>
+                            <p id="threefourcloud">cloud</p>
+                        </div>
+                        <div>
+                            <p id="threefourdegree">5&degC</p>
+                        </div>
+                    </div>
+                    <div class="insideclouds">
+                        <div>
+                            <p id="threefivetime">time</p>
+                        </div>
+                        <div>
+                            <p id="threefivecloud">cloud</p>
+                        </div>
+                        <div>
+                            <p id="threefivedegree">5&degC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+
+    async function fetchdata() {
+
+        const districtSelect = document.getElementById('district');
+        let input = districtSelect.value;
+
+
+        districtSelect.addEventListener('change', function () {
+            const selectedText = districtSelect.options[districtSelect.selectedIndex].text;
+            const selectedValue = districtSelect.value;
+        });
+        //  API
+        const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=14a5d30d8b23b62ebde1b6a84a95f2fd&units=metric`)
+        const original = await data.json()
+        console.log(original)
+        const degree = document.getElementById('city')
+        const temp = document.getElementById('temp')
+        const sky = document.getElementById('sky')
+        degree.innerHTML = `${original.name}`
+        temp.innerHTML = `${original.main.temp}`
+        sky.innerHTML = `${original.weather[0].description}`
+        const timestamp = original.dt; // ✅ Keep it as a number
+
+        const date = new Date(timestamp * 1000);
+
+        const timeStr = date.toTimeString().split(' ')[0]; // 'HH:MM:SS'
+        const dateStr = date.toISOString().split('T')[0];  // 'YYYY-MM-DD'
+
+        const time = document.getElementById('time');
+        const datenew = document.getElementById('date');
+
+        time.innerHTML = timeStr;
+        datenew.innerHTML = dateStr;
+        const lon = original.coord.lon
+        const lat = original.coord.lat
+        console.log(lon, lat)
+        // API
+        const dta = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=14a5d30d8b23b62ebde1b6a84a95f2fd&units=metric`)
+
+        const format = await dta.json()
+        console.log("format data:", format)
+        console.log(format.list[0].dt_txt.split(' ')[0])
+        const dayonedegree = document.getElementById('dayonedegree')
+        const dayotwodegree = document.getElementById('dayotwodegree')
+        const daythreedegree = document.getElementById('daythreedegree')
+        const dayfourdegree = document.getElementById('dayfourdegree')
+        const dayfivedegree = document.getElementById('dayfivedegree')
+
+
+        dayonedegree.innerHTML = `${format.list[7].main.temp} &deg;C`
+        dayotwodegree.innerHTML = `${format.list[8].main.temp} &deg;C`
+        daythreedegree.innerHTML = `${format.list[9].main.temp} &deg;C`
+        dayfourdegree.innerHTML = `${format.list[10].main.temp} &deg;C`
+        dayfivedegree.innerHTML = `${format.list[11].main.temp} &deg;C`
+
+
+
+
+        // date
+        const dayonedate = document.getElementById('dayonedate')
+        const daytwodate = document.getElementById('daytwodate')
+        const daythreedate = document.getElementById('daythreedate')
+        const dayfourdate = document.getElementById('dayfourdate')
+        const dayfivedate = document.getElementById('dayfivedate')
+
+        const dayoneday = document.getElementById('dayoneday')
+        const daytwoday = document.getElementById('daytwoday')
+        const daythreeday = document.getElementById('daythreeday')
+        const dayfourday = document.getElementById('dayfourday')
+        const dayfiveday = document.getElementById('dayfiveday')
+
+        dayonedate.innerHTML = `${format.list[7].dt_txt.split(' ')[0]} `
+        daytwodate.innerHTML = `${format.list[8].dt_txt.split(' ')[0]}`
+        daythreedate.innerHTML = `${format.list[9].dt_txt.split(' ')[0]}`
+        dayfourdate.innerHTML = `${format.list[10].dt_txt.split(' ')[0]}`
+        dayfivedate.innerHTML = `${format.list[11].dt_txt.split(' ')[0]}`
+
+        dayoneday.innerHTML = `${format.list[7].dt_txt.split(' ')[1]} `
+        daytwoday.innerHTML = `${format.list[8].dt_txt.split(' ')[1]}`
+        daythreeday.innerHTML = `${format.list[9].dt_txt.split(' ')[1]}`
+        dayfourday.innerHTML = `${format.list[10].dt_txt.split(' ')[1]}`
+        dayfiveday.innerHTML = `${format.list[11].dt_txt.split(' ')[1]}`
+        //   API
+        const air = await fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=14a5d30d8b23b62ebde1b6a84a95f2fd`)
+        const airformat = await air.json()
+        const covalue = document.getElementById('covalue')
+        const novalue = document.getElementById('novalue')
+        const no2value = document.getElementById('no2value')
+        const o3value = document.getElementById('o3value')
+        covalue.innerHTML = `${airformat.list[0].components.co}`
+        novalue.innerHTML = `${airformat.list[0].components.no}`
+        no2value.innerHTML = `${airformat.list[0].components.no2}`
+        o3value.innerHTML = `${airformat.list[0].components.o3}`
+
+
+        // sunrise & sunset
+        const sunrise = document.getElementById('sunrisetime')
+        const sunset = document.getElementById('sunsettime')
+
+        const timesunrise = original.sys.sunrise;
+        const timesunset = original.sys.sunset;
+
+        const datesunrise = new Date(timesunrise * 1000);
+
+        const datesunset = new Date(timesunset * 1000);
+
+        const timeSunrise = datesunrise.toTimeString().split(' ')[0];
+
+        const timeSunset = datesunset.toTimeString().split(' ')[0];
+        console.log(timeSunset)
+        sunrise.innerHTML = `${timeSunrise}`
+        sunset.innerHTML = `${timeSunset}`
+
+        const threeonetime = document.getElementById('threeonetime')
+        const threeonecloud = document.getElementById('threeonecloud')
+        const threeonedegree = document.getElementById('threeonedegree')
+
+
+        const threetwotime = document.getElementById('threetwotime')
+        const threetwocloud = document.getElementById('threetwocloud')
+        const threetwodegree = document.getElementById('threetwodegree')
+
+        const threethreetime = document.getElementById('threethreetime')
+        const threethreecloud = document.getElementById('threethreecloud')
+        const threethreedegree = document.getElementById('threethreedegree')
+
+        const threefourtime = document.getElementById('threefourtime')
+        const threefourcloud = document.getElementById('threefourcloud')
+        const threefourdegree = document.getElementById('threefourdegree')
+
+        const threefivetime = document.getElementById('threefivetime')
+        const threefivecloud = document.getElementById('threefivecloud')
+        const threefivedegree = document.getElementById('threefivedegree')
+
+        threeonetime.innerHTML = `${`${format.list[0].dt_txt.split(' ')[1]} `}`
+        threetwotime.innerHTML = `${`${format.list[1].dt_txt.split(' ')[1]} `}`
+        threethreetime.innerHTML = `${`${format.list[2].dt_txt.split(' ')[1]} `}`
+        threefourtime.innerHTML = `${`${format.list[3].dt_txt.split(' ')[1]} `}`
+        threefivetime.innerHTML = `${`${format.list[4].dt_txt.split(' ')[1]} `}`
+
+        threeonecloud.innerHTML = `${format.list[0].weather[0].description}`
+        threetwocloud.innerHTML = `${format.list[1].weather[0].description}`
+        threethreecloud.innerHTML = `${format.list[2].weather[0].description}`
+        threefourcloud.innerHTML = `${format.list[3].weather[0].description}`
+        threefivecloud.innerHTML = `${format.list[4].weather[0].description}`
+
+        threeonedegree.innerHTML = `${format.list[0].main.temp} &deg;C`
+        threetwodegree.innerHTML = `${format.list[1].main.temp} &deg;C`
+        threethreedegree.innerHTML = `${format.list[2].main.temp} &deg;C`
+        threefourdegree.innerHTML = `${format.list[3].main.temp} &deg;C`
+        threefivedegree.innerHTML = `${format.list[4].main.temp} &deg;C`
+
+        const forecastList = format.list;
+
+        let currentDay = '';
+        let pressuresPerDay = [];
+
+        for (let i = 0; i < forecastList.length; i++) {
+            const item = forecastList[i];
+            const [date, time] = item.dt_txt.split(' ');
+            const pressure = item.main.pressure;
+
+            if (currentDay === '') {
+                currentDay = date;
+            }
+
+            if (date === currentDay && pressuresPerDay.length < 4) {
+                pressuresPerDay.push(pressure);
+            }
+
+            if (pressuresPerDay.length === 4) break;
+        }
+        pressuresPerDay.forEach((p, index) => {
+            const element = document.getElementById(`pressure${index + 1}`);
+            if (element) {
+                element.innerHTML = `${p} hPa`;
+            }
+        });
+    }
+</script>
+
+</html>
+
+
+
+
+
+
