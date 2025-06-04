@@ -222,7 +222,7 @@ select{
 }
 span{
     position: absolute;
-    right: 25px;
+    right: 15px;
     top: 10;
     color: white;
      margin-right: 40px;
@@ -244,7 +244,7 @@ span:hover{
     }
     .leftside{
         margin-top: 20px;
-        width: 85%;
+        width: 100%;
         gap: 20px;
         align-items: center;
         justify-content: center;
@@ -302,7 +302,9 @@ height: 60%;
   gap: 20px;
 }
 .insideclouds{
+    line-height: 1.2;
     width: 50%;
+    height: 150px;
 }
 
 
