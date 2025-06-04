@@ -221,7 +221,7 @@ select{
 }
 span{
     position: absolute;
-    right: 5;
+    right: 0;
     top: 10;
     color: black;  
 }
