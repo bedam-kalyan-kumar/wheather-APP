@@ -1,0 +1,315 @@
+.inputBar{
+    height: 10vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+}
+#input{
+    height: 60%;
+    width: 40%;
+    position: relative;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+span{
+    position: absolute;
+    right: 445px;
+    top: 10;
+    color: white;
+     margin-right: 40px;
+    
+    
+    
+}
+span:hover{
+    cursor: pointer;
+}
+
+.Wholepage{
+    display: flex;
+    height: 87vh;
+    background-image: url('images.jpg');
+    background-position: bottom;
+    background-attachment: fixed;
+}
+.leftside{
+display: flex;
+flex-direction: column;
+width: 30%;
+gap: 10px;
+padding: 30px;
+
+margin: auto;
+}
+.leftinsideOne {
+  height: 40vh;
+  background: rgba(212, 212, 212, 0.4);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  padding: 10px;           /* Optional: some internal padding for layout */
+  font-size: 23px;
+  line-height: 1.7;         /* Slightly tighter line spacing */
+}
+
+.leftinsideOne p {
+  margin: 2px 0;           /* Reduces vertical space between paragraphs */
+  font-weight: bold;
+}
+
+.leftinsideTwo{
+height: 33vh;
+background: rgba(212,212,212,0.4);
+background: rgba(212,212,212,0.4);
+border-radius: 15px;
+backdrop-filter: blur(15px);
+
+}
+.line{
+    line-height: 1.5;
+}
+.rightside{
+    width: 70%;
+display: flex;
+flex-direction: column;
+gap: 10px;
+padding: 30px;
+}
+.rightinsideOne{
+display: flex;
+height: 30%;
+justify-content: space-around;
+margin: 0 2px;
+padding: 0px;
+line-height: 0.1;
+font-size: 17px;
+
+
+
+}
+.rightinsideTwo{
+display: flex;
+height: 30%;
+padding: 15px;
+gap: 10px;
+}
+.rightinsideThree{
+/* display: flex; */
+height: 30%;
+}
+
+
+.cityname{
+    padding-left: 20px;
+}
+
+.timeandDate{
+    padding-left: 20px;
+    gap: 5px;
+    
+}
+
+.comingdays{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+    margin: 0;
+    padding: 0 6px;
+}
+
+.comingdays p,
+.comingdays h4 {
+    margin: 0;
+    padding: 0 10px;
+    font-size: 20px;
+}
+
+.rightoneone{
+    margin-top: 30px;
+    width: 20%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background: rgba(212,212,212,0.4);
+border-radius: 15px;
+backdrop-filter: blur(15px);
+}
+h5{
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.rightinsideTwoone{
+     /* display: flex; */
+     width: 50%;
+     background: rgba(212,212,212,0.4);
+border-radius: 15px;
+backdrop-filter: blur(15px);
+}
+.rightinsideTwotwo{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(212,212,212,0.4);
+border-radius: 15px;
+backdrop-filter: blur(15px);
+}
+.air{
+    display: flex;
+    justify-content: space-around;
+    line-height: 0.7;
+    font-size: 20px;
+    
+}
+.rightinsideThree{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: rgba(212,212,212,0.4);
+    border-radius: 20px;
+
+}
+.clouds{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0px 6px;
+    font-size: 13px;
+   padding-bottom: 10px;
+   column-gap: 2px;
+   /* background: rgba(212,212,212,0.4); */
+border-radius: 15px;
+backdrop-filter: blur(15px);
+    
+}
+
+.insideclouds{
+    border: 2px solid white;
+   width: 15%;
+   height: 95%;
+   padding-left: 40px;
+  line-height: 0.5;
+  font-size: 16px;
+  border-radius: 15px;
+
+}
+
+select{
+    width: 250px;
+    height: 20px;
+}
+
+
+
+
+/* Mobile UI */
+@media only screen and (max-width: 727px) {
+    #input{
+    height: 60%;
+    width: 40%;
+    position: relative;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+span{
+    position: absolute;
+    right: 25px;
+    top: 10;
+    color: white;
+     margin-right: 40px;
+    
+    
+    
+}
+span:hover{
+    cursor: pointer;
+}
+    
+    .Wholepage{
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        gap: 10px;
+
+        align-items: center;
+    }
+    .leftside{
+        margin-top: 20px;
+        width: 85%;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    .leftinsideOne{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+    }
+    .leftinsideTwo{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+    }
+
+    .rightside{
+        margin-top: 0px;
+    width: 90%;
+display: flex ;
+flex-direction: column;
+gap: 10px;
+padding: 30px;
+}
+.rightinsideOne{
+ display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+height: 60%;
+
+}
+.rightoneone{
+    width: 95%;
+    justify-content: space-around;
+}
+.rightinsideTwo{
+  display: flex;
+  flex-direction: column;
+}
+.rightinsideTwoone{
+    width: 100%;
+}
+.rightinsideTwotwo{
+    width: 100%;
+}
+
+/* .rightinsideThree{
+    
+} */
+
+.clouds{
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.insideclouds{
+    width: 50%;
+}
+
+
+
+
+
+
+
+
+}
