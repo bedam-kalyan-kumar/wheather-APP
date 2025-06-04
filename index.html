@@ -243,7 +243,7 @@
         //  API
         const data = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${input}&appid=14a5d30d8b23b62ebde1b6a84a95f2fd&units=metric`)
         const original = await data.json()
-        console.log(original)
+        
         const degree = document.getElementById('city')
         const temp = document.getElementById('temp')
         const sky = document.getElementById('sky')
@@ -264,13 +264,13 @@
         datenew.innerHTML = dateStr;
         const lon = original.coord.lon
         const lat = original.coord.lat
-        console.log(lon, lat)
+        
         // API
         const dta = await fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=14a5d30d8b23b62ebde1b6a84a95f2fd&units=metric`)
 
         const format = await dta.json()
-        console.log("format data:", format)
-        console.log(format.list[0].dt_txt.split(' ')[0])
+        
+        
         const dayonedegree = document.getElementById('dayonedegree')
         const dayotwodegree = document.getElementById('dayotwodegree')
         const daythreedegree = document.getElementById('daythreedegree')
@@ -338,7 +338,7 @@
         const timeSunrise = datesunrise.toTimeString().split(' ')[0];
 
         const timeSunset = datesunset.toTimeString().split(' ')[0];
-        console.log(timeSunset)
+        
         sunrise.innerHTML = `${timeSunrise}`
         sunset.innerHTML = `${timeSunset}`
 
