@@ -221,14 +221,10 @@ select{
 }
 span{
     position: absolute;
-    right: 5px;
+    right: 5;
     top: 10;
     color: black;  
 }
-    #search{
-        top:10;
-        right:3px;
-    }
 span:hover{
     cursor: pointer;
 }
