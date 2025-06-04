@@ -222,7 +222,7 @@ select{
 }
 span{
     position: absolute;
-    right: 5px;
+    right: 0;
     top: 10;
     color: black;
      
