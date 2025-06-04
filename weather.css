@@ -8,7 +8,7 @@
     
 }
 #input{
-    height: 50%;
+    height: 60%;
     width: 40%;
     position: relative;
     border-radius: 30px;
@@ -18,10 +18,12 @@
 }
 span{
     position: absolute;
-    right: 390px;
+    right: 445px;
     top: 10;
+    color: white;
+     margin-right: 40px;
     
-    color: black;
+    
     
 }
 span:hover{
@@ -41,7 +43,7 @@ flex-direction: column;
 width: 30%;
 gap: 10px;
 padding: 30px;
-
+padding-left: 16px;
 margin: auto;
 }
 .leftinsideOne {
@@ -202,4 +204,115 @@ backdrop-filter: blur(15px);
 select{
     width: 250px;
     height: 20px;
+}
+
+
+
+
+/* Mobile UI */
+@media only screen and (max-width: 727px) {
+    #input{
+    height: 60%;
+    width: 30%;
+    position: relative;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+}
+span{
+    position: absolute;
+    right: 5px;
+    top: 10;
+    color: black;
+     
+    
+    
+    
+}
+span:hover{
+    cursor: pointer;
+}
+    
+    .Wholepage{
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        gap: 10px;
+
+        /* align-items: center; */
+    }
+    .leftside{
+        margin-top: 20px;
+        margin-left: 5px;
+        width: 90%;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+    .leftinsideOne{
+        width: 90%;
+        align-items: center;
+        justify-content: center;
+        height: 250px;
+    }
+    .leftinsideTwo{
+        width: 100%;
+        /* align-items: center;
+        justify-content: center; */
+        height: 300px;
+    }
+    .line{
+        line-height: 2;
+    }
+.comingdays p{
+    font-size: 16px;
+}
+    .rightside{
+        margin-top: 0px;
+    width: 90%;
+display: flex ;
+flex-direction: column;
+gap: 10px;
+padding: 30px;
+}
+.rightinsideOne{
+ display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 100%;
+height: 60%;
+
+}
+.rightoneone{
+    width: 95%;
+    justify-content: space-around;
+}
+.rightinsideTwo{
+  display: flex;
+  flex-direction: column;
+}
+.rightinsideTwoone{
+    width: 100%;
+}
+.rightinsideTwotwo{
+    width: 100%;
+}
+
+
+.clouds{
+    display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-right: 10px;
+}
+.insideclouds{
+    line-height: 1.2;
+    width: 55%;
+    height: 150px;
+    
+    
+}
+
+
 }
